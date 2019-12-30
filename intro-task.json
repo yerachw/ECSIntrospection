@@ -1,0 +1,40 @@
+{
+    "requiresCompatibilities": [
+        "FARGATE",
+        "EC2"
+    ],
+    "containerDefinitions": [
+    {
+      "name": "introspection",
+      "image": "482995409068.dkr.ecr.ap-southeast-1.amazonaws.com/introspection:latest",
+      "environment": [
+        {
+          "name": "LOG_GROUP",
+          "value": "yourcopy-staging-app"
+        },
+        {
+          "name": "LOG_STREAM",
+          "value": "introspection"
+        }
+       
+      ],
+      "essential": true,
+      "logConfiguration": {
+          "logDriver": "awslogs",
+          "options": {
+            "awslogs-group": "yourcopy-staging-system",
+            "awslogs-region": "ap-southeast-1",
+            "awslogs-stream-prefix": "introspection"
+          }
+      }
+    }
+  ],
+  "family": "introspection",
+  "networkMode": "awsvpc",
+  "memory": "512",
+  "cpu": "256",
+  "executionRoleArn": "arn:aws:iam::482995409068:role/ecsTaskExecutionRole",
+  "taskRoleArn": "arn:aws:iam::482995409068:role/ecsInstanceRole"
+ }
+
+

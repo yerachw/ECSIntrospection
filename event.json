@@ -1,0 +1,55 @@
+{
+    "version": "0",
+    "id": "f98aefc9-426e-918f-02d9-4e00d7ec8644",
+    "detail-type": "ECS Task State Change",
+    "source": "aws.ecs",
+    "account": "482995409068",
+    "time": "2019-12-30T16:41:57Z",
+    "region": "ap-southeast-1",
+    "resources": [
+      "arn:aws:ecs:ap-southeast-1:482995409068:task/a77783dd-c3c0-4d9e-99b4-451f4dab3252"
+    ],
+    "detail": {
+      "attachments": [],
+      "availabilityZone": "ap-southeast-1b",
+      "clusterArn": "arn:aws:ecs:ap-southeast-1:482995409068:cluster/MobiFone-Vietnam-staging",
+      "containerInstanceArn": "arn:aws:ecs:ap-southeast-1:482995409068:container-instance/7145d0d9-e337-4ffd-80a6-5dbcc014b90b",
+      "containers": [
+        {
+          "containerArn": "arn:aws:ecs:ap-southeast-1:482995409068:container/21782119-f213-49d0-a3f4-83979ff92be4",
+          "lastStatus": "RUNNING",
+          "name": "worker",
+          "image": "482995409068.dkr.ecr.ap-southeast-1.amazonaws.com/yourcopy/staging/worker:latest",
+          "taskArn": "arn:aws:ecs:ap-southeast-1:482995409068:task/a77783dd-c3c0-4d9e-99b4-451f4dab3252",
+          "networkInterfaces": [],
+          "cpu": "0"
+        }
+      ],
+      "createdAt": "2019-12-30T16:34:54.4Z",
+      "launchType": "EC2",
+      "cpu": "0",
+      "memory": "6656",
+      "desiredStatus": "STOPPED",
+      "group": "service:yourcopy-worker",
+      "lastStatus": "RUNNING",
+      "overrides": {
+        "containerOverrides": [
+          {
+            "name": "worker"
+          }
+        ]
+      },
+      "connectivity": "CONNECTED",
+      "connectivityAt": "2019-12-30T16:34:54.4Z",
+      "pullStartedAt": "2019-12-30T16:34:58.311Z",
+      "startedAt": "2019-12-30T16:35:12.311Z",
+      "startedBy": "ecs-svc/9223370459131089193",
+      "stoppingAt": "2019-12-30T16:41:57.659Z",
+      "pullStoppedAt": "2019-12-30T16:35:08.311Z",
+      "stoppedReason": "Scaling activity initiated by (deployment ecs-svc/9223370459131089193)",
+      "updatedAt": "2019-12-30T16:41:57.659Z",
+      "taskArn": "arn:aws:ecs:ap-southeast-1:482995409068:task/a77783dd-c3c0-4d9e-99b4-451f4dab3252",
+      "taskDefinitionArn": "arn:aws:ecs:ap-southeast-1:482995409068:task-definition/yourcopy-worker-staging:1",
+      "version": 3
+    }
+  }
